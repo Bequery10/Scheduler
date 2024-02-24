@@ -11,7 +11,7 @@ The input should follow the format (please check the example below afterwards):
 6-repeat the same process, beginning from the 2th step, if multiple classes exist
 7-enter a later hour for you
 
-Writing your input somewhere in this format then copying and pasting them as the program input is suggested.
+Writing your input to somewhere in this format then copying and pasting them as the program input is suggested.
 
 Input Example:
 5

@@ -30,7 +30,7 @@ public class Main {
 	}
 	
 	private static void printCombinations(){
-		boolean[][]occupiedHours=new boolean[5][15];
+		boolean[][]occupiedHours=new boolean[7][15];
 		
 		//System.out.println(infoList);
 		
@@ -75,7 +75,7 @@ public class Main {
 		for(String s : table.keySet()) { //----------class
 			if(nameList.contains(s)) continue;
 			
-			boolean[][]occupiedHoursDataSaver=new boolean[5][15];//////////////////////////////////////////////////////////////
+			boolean[][]occupiedHoursDataSaver=new boolean[7][15];//////////////////////////////////////////////////////////////
 			
 			for(int n=0;n<occupiedHours.length;n++)
 				for(int j=0;j<occupiedHours[n].length;j++) {
@@ -135,21 +135,34 @@ public class Main {
 			List<Integer> hours=classTable.get(i1).get(s1);
 			
 			int column=-1;
-			switch(day) {
-			case "Mo" : column=0;
-				break;
-				
-			case "Tu" : column=1;
-				break;
-				
-			case "We" : column=2;
-				break;
-				
-			case "Th" : column=3;
-				break;
-				
-			case "Fr" : column=4;
-				break;
+			switch(day.toLowerCase()) {
+			case "monday":	
+			case "mo" : column=0;
+			break;
+			
+			case "tuesday":
+			case "tu" : column=1;
+			break;
+			
+			case "wednesday":
+			case "we" : column=2;
+			break;
+			
+			case "thursday":
+			case "th" : column=3;
+			break;
+			
+			case "friday":
+			case "fr" : column=4;
+			break;
+			
+			case "saturday":
+			case "st" : column=5;	
+			break;
+			
+			case "sunday":
+			case "su" : column=6;
+			break;	
 			}
 			
 			boolean pass=true;

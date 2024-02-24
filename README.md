@@ -1,5 +1,6 @@
 # Scheduler
-Open Source Scheduler 
+Open Source Scheduler
+The Scheduler displays every possible unique combination a weekly  
 
 This Scheduler uses 24-hour clock system
 The input should follow the format (please check the example below afterwards): 
@@ -12,6 +13,15 @@ The input should follow the format (please check the example below afterwards):
 7-enter a later hour for you
 
 Writing your input to somewhere in this format then copying and pasting them as the program input is suggested.
+
+Abbreviations: 
+Sunday -> Sunday or su
+Monday -> Monday or Mo
+Tuesday -> Tuesday or Tu
+Wednesday -> Wednesday or We
+Thursday -> Thursday or Th
+Friday -> Friday or Fr
+Saturday -> Saturday or st
 
 Input Example:
 5

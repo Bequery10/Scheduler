@@ -1,6 +1,6 @@
 # Scheduler
-Open Source Scheduler
-The Scheduler displays every possible unique combination a weekly  
+This open Source Scheduler can schedule classes with multiple or single sections with no collision.
+  
 
 This Scheduler uses 24-hour clock system
 The input should follow the format (please check the example below afterwards): 

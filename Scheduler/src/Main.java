@@ -212,7 +212,16 @@ public class Main {
 
 					List<List<String>> combinationCopy = new ArrayList<>();
 
-					if (count == table.size() && count2 == classTable.get(i1).size()) {
+					boolean allMissingsAreElective = true;
+					for (String name1 : table.keySet()) {
+						if (!nameList.contains(name1) && !table.get(name1).elective) {
+							allMissingsAreElective = false;
+						}
+					}
+
+					// System.out.println((allMissingsAreElective || count == table.size()) + "\n" +
+					// combination);
+					if ((allMissingsAreElective || count == table.size()) && count2 == classTable.get(i1).size()) {
 
 						for (List<String> s2 : combination)
 							combinationCopy.add(s2);
@@ -278,8 +287,14 @@ public class Main {
 			System.out.println("Enter class name: ");
 			String name = sc.nextLine();
 
+			boolean elective = false;
+			System.out.println("Is it elective ? (1/0)");
+			String elective_string = sc.nextLine();
+			elective = elective_string.toLowerCase().equals("yes") ? true : false;
+
 			Class class1 = new Class();
 			class1.name = name;
+			class1.elective = elective;
 
 			System.out.println("How many sections ?");
 			int amount = sc.nextInt();
@@ -350,7 +365,7 @@ public class Main {
 
 class Class {
 	String name = "";
-
+	boolean elective = false;
 	Hashtable<Integer, Hashtable<String, List<Integer>>> sections = new Hashtable<>();
 
 }
